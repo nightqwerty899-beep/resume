@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Резюме · стажировка</title>
+    <meta
+      name="description"
+      content="Личное резюме: направление стажировки, образование, опыт и контакты."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="profile.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="header wrap">
+      <a class="wordmark" href="#home" aria-label="В начало"
+        >CV<span class="orange">/</span><span id="initials">ВИ</span></a
+      >
+      <nav aria-label="Основная навигация">
+        <a href="#about">Обо мне</a><a href="#experience">Опыт</a
+        ><a href="#education">Образование</a>
+      </nav>
+      <a class="header-contact" href="#contact">На связи <span>↗</span></a>
+    </header>
+    <main id="home">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Открыт к стажировке</p>
+          <h1 id="hero-name">Ваше<br />имя<span class="orange">.</span></h1>
+          <div class="role-line">
+            <span class="tiny-label">НАПРАВЛЕНИЕ</span>
+            <p id="direction"></p>
+          </div>
+          <p class="intro" id="intro"></p>
+          <div class="actions">
+            <a class="button primary" href="#contact">Давайте знакомиться <span>↗</span></a
+            ><a class="text-link github-link" target="_blank" rel="noopener noreferrer"
+              >GitHub <span>↗</span></a
+            >
+          </div>
+        </div>
+        <div class="visual" id="visual">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="model-label">
+            <span class="mini-cross">+</span> ЛИЧНЫЙ ПРОФИЛЬ <span>01 / CV</span>
+          </div>
+          <canvas
+            id="sculpture"
+            aria-label="Интерактивная объёмная скульптура — графитовый узел"
+            role="img"
+          ></canvas>
+          <div class="model-fallback" aria-hidden="true">
+            <div class="fallback-ring"></div>
+            <div class="fallback-ring second"></div>
+          </div>
+          <div class="visual-caption">
+            <span class="orange">↗</span> Новые задачи.<br />Новые связи.
+          </div>
+          <span class="visual-coordinate" aria-hidden="true">X / Y / Z</span>
+        </div>
+        <div class="hero-bottom">
+          <span id="location"></span><a href="#about">Узнать больше <span>↓</span></a
+          ><span id="availability-short"></span>
+        </div>
+      </section>
+      <section class="section wrap reveal" id="about">
+        <div class="section-label"><span>01 /</span> ОБО МНЕ</div>
+        <div class="section-content">
+          <h2>Немного контекста<span class="orange">.</span></h2>
+          <p class="large-copy" id="about-text"></p>
+          <div class="facts">
+            <div>
+              <span class="tiny-label">ЗАНЯТОСТЬ</span>
+              <p id="availability"></p>
+            </div>
+            <div>
+              <span class="tiny-label">ФОРМАТ РАБОТЫ</span>
+              <p id="work-format"></p>
+            </div>
+          </div>
+          <div class="skills" id="skills" aria-label="Навыки"></div>
+        </div>
+      </section>
+      <section class="section wrap reveal" id="experience">
+        <div class="section-label"><span>02 /</span> ОПЫТ И ПРАКТИКА</div>
+        <div class="section-content">
+          <h2>Что уже делал<span class="orange">.</span></h2>
+          <div id="experience-list"></div>
+        </div>
+      </section>
+      <section class="section wrap reveal" id="education">
+        <div class="section-label"><span>03 /</span> ОБРАЗОВАНИЕ</div>
+        <div class="section-content">
+          <h2>Где учусь<span class="orange">.</span></h2>
+          <div id="education-list"></div>
+        </div>
+      </section>
+      <section class="contact-section reveal" id="contact">
+        <div class="wrap contact-inner">
+          <div>
+            <p class="eyebrow">04 / КОНТАКТЫ</p>
+            <h2>Начнём<br />с разговора<span class="orange">?</span></h2>
+          </div>
+          <div class="contact-right">
+            <p id="contact-note"></p>
+            <a class="contact-email" id="email-link"></a>
+            <div class="contact-links">
+              <a id="telegram-link" target="_blank" rel="noopener noreferrer">Telegram ↗</a
+              ><a class="github-link" target="_blank" rel="noopener noreferrer">GitHub ↗</a
+              ><a id="phone-link"></a>
+            </div>
+            <button id="copy-email" class="copy-button" type="button">
+              Скопировать почту <span>↗</span></button
+            ><span id="copy-status" class="copy-status" aria-live="polite"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      <span id="footer-name"></span><span>Резюме / <span id="year"></span></span
+      ><a href="#home">Наверх ↑</a>
+    </footer>
+  </body>
+</html>
